@@ -11,7 +11,7 @@ library(doParallel)
 library(rpart)
 library(rpart.plot)
 
-setwd("~/Desktop/Heart-Disease-Capstone")
+setwd("~/Desktop/Heart-Disease-R-Shiny")
 
 #Run this line the first time you run the file 
 #to auto-generate a file in the directory called model.rda
