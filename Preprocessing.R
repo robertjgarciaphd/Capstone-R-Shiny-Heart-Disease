@@ -1,3 +1,10 @@
+library(dplyr)
+library(ROSE)
+library(cowplot)
+library(randomForest)
+library(rpart)
+library(rpart.plot)
+
 df <- read.csv(file = "./heart_2020_cleaned.csv")
 
 #Reformatting categorical and ordinal data
@@ -109,7 +116,7 @@ pred.tree.over <- predict(tree_over, newdata = test)
 #No significant effect of physical activity, likely eclipsed by DiffWalking and PhysicalHealth
 #Model without PhysicalActivity
 
-##model = glm(HeartDisease ~ . , family = "binomial", data = data_balanced_over)
+model = glm(HeartDisease ~ . , family = "binomial", data = data_balanced_over)
 ##summary(model)
 
 #Use this code below to predict probabilities in app, sub in newdata with a single row
