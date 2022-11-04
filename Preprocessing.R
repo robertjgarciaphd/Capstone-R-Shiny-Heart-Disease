@@ -5,7 +5,8 @@ library(randomForest)
 library(rpart)
 library(rpart.plot)
 
-df <- read.csv(file = "./heart_2020_cleaned.csv")
+#df <- read.csv(file = "./heart_2020_cleaned.csv")
+df <- read.csv("https://drive.google.com/uc?export=download&id=1YvVqcSxCbjZu4OSXKoGfO2TijbxNkcir")
 
 #Reformatting categorical and ordinal data
 
