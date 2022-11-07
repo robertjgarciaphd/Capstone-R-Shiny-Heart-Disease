@@ -10,6 +10,10 @@ library(randomForest)
 library(doParallel)
 library(rpart)
 library(rpart.plot)
+library(googledrive)
+library(RCurl)
+library(curl)
+library(data.table)
 
 setwd("~/Desktop/Capstone-R-Shiny-Heart-Disease")
 
@@ -18,4 +22,5 @@ setwd("~/Desktop/Capstone-R-Shiny-Heart-Disease")
 source('Preprocessing.R')
 
 #loading the model
-model_old = readRDS("./model.rda")
+model_old = readRDS('./model.rda')
+

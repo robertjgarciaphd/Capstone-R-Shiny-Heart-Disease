@@ -106,10 +106,10 @@ summary(data_balanced_over)
 
 
 #build decision tree model
-tree_over <- rpart(HeartDisease ~ ., data = data_balanced_over)
+#tree_over <- rpart(HeartDisease ~ ., data = data_balanced_over)
 
 #make predictions on unseen data
-pred.tree.over <- predict(tree_over, newdata = test)
+#pred.tree.over <- predict(tree_over, newdata = test)
 
 
 
@@ -129,8 +129,8 @@ model = glm(HeartDisease ~ . , family = "binomial", data = data_balanced_over)
 saveRDS(model, file = "./model.rda")
 
 #This proves that entering a single row of data yields a single value for probability
-single_test_row = data_balanced_over[1,]
-single_test_row_output = predict(model, type="response", newdata = single_test_row)
-class(single_test_row_output) #numeric output needs to be converted to character
+#single_test_row = data_balanced_over[1,]
+#single_test_row_output = predict(model, type="response", newdata = single_test_row)
+#class(single_test_row_output) #numeric output needs to be converted to character
 
 
